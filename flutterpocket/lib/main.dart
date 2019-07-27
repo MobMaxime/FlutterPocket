@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterpocket/src/ui/Dashboard/dashbord.dart';
 import 'package:flutterpocket/src/blocs/Provider.dart';
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -13,6 +12,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
+          fontFamily: 'Aller',
         ),
         home: Dashboard('Flutter Pocket'),
       ),

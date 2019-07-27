@@ -40,6 +40,28 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway/Raleway-Regular.ttf
+        - asset: fonts/Raleway/Raleway-Bold.ttf
+        - asset: fonts/Raleway/Raleway-Italic.ttf
+          style: normal
+    - family: OpenSans
+      fonts: 
+        - asset: fonts/OpenSans/OpenSans-Regular.ttf
+        - asset: fonts/OpenSans/OpenSans-Bold.ttf
+        - asset: fonts/OpenSans/OpenSans-Italic.ttf
+          style: normal
+    - family: Aller
+      fonts:
+        - asset: fonts/Aller/Aller_Rg.ttf
+        - asset: fonts/Aller/Aller_Bd.ttf
+          weight: 900
+  assets:
+    - assets/
+    - assets/laptop/
+    - assets/profile/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

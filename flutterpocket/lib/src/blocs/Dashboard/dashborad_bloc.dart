@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutterpocket/src/utils/constants.dart';
 class Bloc{
   List<String> widgetArray = Constants.widgetArray;
+  List<String> widgetController = Constants.widgetController;
+  List<String> images = Constants.images;
   List<Icon> widgetIcon = Constants.widgetIcon;
   StreamController<List<String>> _dataController = new StreamController<List<String>>.broadcast();
   
