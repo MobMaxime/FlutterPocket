@@ -11,20 +11,20 @@ class SamplePageController extends StatelessWidget {
     controller: mainController,
     scrollDirection: Axis.horizontal,
     children: <Widget>[
-      Container(child: Image.asset('assets/wp1.jpg',fit: BoxFit.fill,),),
-      Container(child: Image.asset('assets/wp2.jpg',fit: BoxFit.fill,),),
-      Container(child: Image.asset('assets/wp3.jpg',fit: BoxFit.fill,),),
-      Container(child: Image.asset('assets/wp4.jpg',fit: BoxFit.fill,),),
+      Container(child: Image.asset('assets/nature/wp1.jpeg',fit: BoxFit.fill,),),
+      Container(child: Image.asset('assets/nature/wp2.jpeg',fit: BoxFit.fill,),),
+      Container(child: Image.asset('assets/nature/wp3.jpeg',fit: BoxFit.fill,),),
+      Container(child: Image.asset('assets/nature/wp4.jpeg',fit: BoxFit.fill,),),
     ],
   );
   final pageView2 = PageView(
     controller: mainController,
     scrollDirection: Axis.vertical,
     children: <Widget>[
-      Container(child: Image.asset('assets/wp5.jpg',fit: BoxFit.fill,),),
-      Container(child: Image.asset('assets/wp2.jpg',fit: BoxFit.fill,),),
-      Container(child: Image.asset('assets/wp3.jpg',fit: BoxFit.fill,),),
-      Container(child: Image.asset('assets/wp4.jpg',fit: BoxFit.fill,),),
+      Container(child: Image.asset('assets/nature/wp5.jpeg',fit: BoxFit.fill,),),
+      Container(child: Image.asset('assets/nature/wp2.jpeg',fit: BoxFit.fill,),),
+      Container(child: Image.asset('assets/nature/wp3.jpeg',fit: BoxFit.fill,),),
+      Container(child: Image.asset('assets/nature/wp4.jpeg',fit: BoxFit.fill,),),
     ],
   );
     return Scaffold(

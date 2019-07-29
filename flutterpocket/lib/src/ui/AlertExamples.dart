@@ -38,34 +38,40 @@ class AlertExamples extends StatelessWidget {
               splashColor: Color(0xFF80CBC4),
               highlightElevation: 2,
               minWidth: 250,
+              height: 40,
               onPressed: (){this.showAlert(context);},
             ),
+            Padding(padding: EdgeInsets.fromLTRB(0, 10, 0, 0),),
             MaterialButton(
               color: Color(Constants.ThemeColor),
               child: Text('Alert with Action',style: TextStyle(color: Colors.white),),
               splashColor: Color(0xFF80CBC4),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
               minWidth: 250,
+              height: 40,
               onPressed: (){
                 this.showAlertAction(context);
               },
             ),
+            Padding(padding: EdgeInsets.fromLTRB(0, 10, 0, 0),),
             MaterialButton(
-              
               color: Color(Constants.ThemeColor),
               child: Text('Alert with Input',style: TextStyle(color: Colors.white)),
               shape: StadiumBorder(),
               splashColor: Color(0xFF80CBC4),
               minWidth: 250,
+              height: 40,
               onPressed: (){
                 this.showAlertInput(context);
               },
             ),
+            Padding(padding: EdgeInsets.fromLTRB(0, 10, 0, 0),),
             MaterialButton(
               color: Color(Constants.ThemeColor),
               child: Text('Multiple Action',style: TextStyle(color: Colors.white)),
               splashColor: Color(0xFF80CBC4),
               minWidth: 250,
+              height: 40,
               onPressed: (){
                 this.showAlertManyAction(context);
               },

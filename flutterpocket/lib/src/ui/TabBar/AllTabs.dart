@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutterpocket/src/ui/GridView/GridExample1.dart';
-import 'package:flutterpocket/src/ui/GridView/GridExample2.dart';
+import 'package:flutterpocket/src/ui/TabBar/BottomTabSample.dart';
+import 'package:flutterpocket/src/ui/TabBar/ScrollTabSample.dart';
+import 'package:flutterpocket/src/ui/TabBar/TabViewSample.dart';
 import 'package:flutterpocket/src/utils/constants.dart';
-class AllGrid extends StatelessWidget {
+class AllTabs extends StatelessWidget {
   final style = TextStyle(color: Color(Constants.FontColor),);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('GridView Sample'),
+        title: Text('TabView Sample'),
         backgroundColor: Color(Constants.ThemeColor),
       ),
       body: Container(
@@ -19,18 +20,26 @@ class AllGrid extends StatelessWidget {
           children: <Widget>[
             Card(color: Color(Constants.ThemeColor),
               child: ListTile(
-              title: Text('Grid Example1',style: style,),
+              title: Text('Simple Tabbar',style: style,),
               onTap: (){
                 Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => new GridExample1('GridView Example1')));
+                          builder: (BuildContext context) => new TabViewSample('Simple Tabbar')));
               },
             ),),
             Card(color: Color(Constants.ThemeColor),
               child: ListTile(
-              title: Text('Grid Example2',style: style,),
+              title: Text('Bottom Tabbar',style: style,),
               onTap: (){
                 Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => new GridExample2('GridView Example2')));
+                          builder: (BuildContext context) => new BottomTabSample('Bottom Tabbar')));
+              },
+            ),),
+            Card(color: Color(Constants.ThemeColor),
+              child: ListTile(
+              title: Text('Scroll Tabbar',style: style,),
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) => new ScrollTabSample('Scroll Tabbar')));
               },
             ),),
           ],

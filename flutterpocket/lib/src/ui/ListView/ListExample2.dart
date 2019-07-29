@@ -16,7 +16,7 @@ class ListExample2 extends StatelessWidget {
           itemBuilder: (context,index){
             return Card(
               child: ListTile(
-              leading: Icon(Icons.person),
+              leading: CircleAvatar(child: Icon(Icons.person),backgroundColor: Color(Constants.ThemeColor),),
               title: Text(Constants.nameList[index]),
             ),
           );

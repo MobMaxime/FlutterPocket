@@ -58,13 +58,16 @@ class GridHeroSample extends State<GridExample2>{
         backgroundColor: Color(Constants.ThemeColor),
           title: Text(widget.title),
       ),
-      body: GridView.count(
+      body: Container(
+        // color: Color(Constants.BgColor),
+        child: GridView.count(
               // primary: true,
               // padding: const EdgeInsets.all(20.0),
               scrollDirection: Axis.vertical,
               crossAxisCount: 2,            
               children: gridContainers,
             ),
+      )
     );
   }
 }

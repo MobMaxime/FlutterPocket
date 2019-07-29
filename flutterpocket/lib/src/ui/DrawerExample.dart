@@ -10,10 +10,16 @@ class DrawerExample extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
         backgroundColor: Color(Constants.ThemeColor),
+        
       ),
       drawer: getDrawer(context),
       drawerDragStartBehavior: DragStartBehavior.down,
       body: Container(color: Color(Constants.BgColor),),
+      floatingActionButton: FloatingActionButton(
+        child: Text('Exit'),
+        onPressed: (){Navigator.pop(context);},
+        backgroundColor: Color(Constants.ThemeColor),
+      ),
     ); 
   }
 }
@@ -54,6 +60,14 @@ Widget getDrawer(context)
             ListTile(
               leading: Icon(Icons.settings),
               title: Text('Setting'),
+              onTap: (){
+                Navigator.pop(context);
+                },
+            ),
+            Divider(color: Colors.black,),
+            ListTile(
+              leading: Icon(Icons.rate_review),
+              title: Text('Rate Us'),
               onTap: (){
                 Navigator.pop(context);
                 },

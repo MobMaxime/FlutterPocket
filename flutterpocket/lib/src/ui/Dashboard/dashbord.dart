@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutterpocket/src/ui/DrawerExample.dart';
 import 'package:flutterpocket/src/ui/GridView/AllGrid.dart';
-import 'package:flutterpocket/src/ui/TabViewSample.dart';
+import 'package:flutterpocket/src/ui/MapExample.dart';
+import 'package:flutterpocket/src/ui/PageSwiper.dart';
+import 'package:flutterpocket/src/ui/TabBar/AllTabs.dart';
 import 'package:flutterpocket/src/utils/constants.dart';
 import 'package:flutterpocket/src/blocs/Provider.dart';
 import 'package:flutterpocket/src/blocs/Navigation/navigationBloc.dart';
@@ -12,6 +14,7 @@ import 'package:flutterpocket/src/ui/ListView/AllList.dart';
 
 class Dashboard extends StatelessWidget {
   final String title;
+  final style = TextStyle(color: Color(Constants.FontColor),);
   Dashboard(this.title);
   @override
   Widget build(BuildContext context) {
@@ -27,9 +30,10 @@ class Dashboard extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: ListView(children: <Widget>[
             Card(
+              color: Color(Constants.ThemeColor),
                 child: ListTile(
-                  leading: bloc.widgetIcon[0],
-                  title: Text(bloc.widgetArray[0]),
+                  leading: Icon(Icons.list,color: Color(Constants.FontColor),),
+                  title: Text('ListView',style: style,),
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) => new AllList()));
@@ -37,9 +41,10 @@ class Dashboard extends StatelessWidget {
                 ),
               ),
               Card(
+                color: Color(Constants.ThemeColor),
                 child: ListTile(
-                  leading: bloc.widgetIcon[1],
-                  title: Text(bloc.widgetArray[1]),
+                  leading: Icon(Icons.view_module,color: Color(Constants.FontColor),),
+                  title: Text('GridView',style: style,),
                   onTap: () {
                      Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) => new AllGrid()));
@@ -47,9 +52,10 @@ class Dashboard extends StatelessWidget {
                 ),
               ),
               Card(
+                color: Color(Constants.ThemeColor),
                 child: ListTile(
-                  leading: bloc.widgetIcon[2],
-                  title: Text(bloc.widgetArray[2]),
+                  leading: Icon(Icons.add_alert,color: Color(Constants.FontColor),),
+                  title: Text('Alert Dialogs',style: style,),
                   onTap: () {
                      Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) => new AlertExamples()));
@@ -57,9 +63,32 @@ class Dashboard extends StatelessWidget {
                 ),
               ),
               Card(
+                color: Color(Constants.ThemeColor),
                 child: ListTile(
-                  leading: bloc.widgetIcon[3],
-                  title: Text(bloc.widgetArray[3]),
+                  leading: Icon(Icons.tab,color: Color(Constants.FontColor),),
+                  title: Text('TabBar',style: style,),
+                  onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                           builder: (BuildContext context) => new AllTabs()));
+                  },
+                ),
+              ),
+               Card(
+                color: Color(Constants.ThemeColor),
+                child: ListTile(
+                  leading: Icon(Icons.view_list,color: Color(Constants.FontColor),),
+                  title: Text('Drawer',style: style,),
+                  onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                           builder: (BuildContext context) => new DrawerExample('Home')));
+                  },
+                ),
+              ),
+              Card(
+                color: Color(Constants.ThemeColor),
+                child: ListTile(
+                  leading: Icon(Icons.pageview,color: Color(Constants.FontColor),),
+                  title: Text('Page Controller',style: style,),
                   onTap: () {
                       navBloc.updateNavigation(bloc.widgetController[5]);
                       if(navBloc.navigationProvider.currentNavigation==bloc.widgetController[5])
@@ -72,35 +101,39 @@ class Dashboard extends StatelessWidget {
                 ),
               ),
               Card(
+                color: Color(Constants.ThemeColor),
                 child: ListTile(
-                  leading: bloc.widgetIcon[4],
-                  title: Text(bloc.widgetArray[4]),
+                  leading: Icon(Icons.view_agenda,color: Color(Constants.FontColor),),
+                  title: Text('CustomScrollView',style: style,),
                   onTap: () {
                      Navigator.of(context).push(MaterialPageRoute(
                            builder: (BuildContext context) => new SliversExample()));
                   },
                 ),
-              ),
+              ),    
               Card(
+                color: Color(Constants.ThemeColor),
                 child: ListTile(
-                  leading: bloc.widgetIcon[5],
-                  title: Text(bloc.widgetArray[5]),
+                  leading: Icon(Icons.navigation,color: Color(Constants.FontColor),),
+                  title: Text('Swiper',style: style,),
                   onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                           builder: (BuildContext context) => new TabViewSample('TabBar Example')));
+                     Navigator.of(context).push(MaterialPageRoute(
+                           builder: (BuildContext context) => new PageSwiper('Page Swiper')));
                   },
                 ),
-              ),
+              ), 
               Card(
+                color: Color(Constants.ThemeColor),
                 child: ListTile(
-                  leading: bloc.widgetIcon[6],
-                  title: Text(bloc.widgetArray[6]),
+                  leading: Icon(Icons.map,color: Color(Constants.FontColor),),
+                  title: Text('Google Map',style: style,),
                   onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                           builder: (BuildContext context) => new DrawerExample('Home')));
+                     Navigator.of(context).push(MaterialPageRoute(
+                           builder: (BuildContext context) => new MapExample()));
                   },
                 ),
-              ),
+              ),            
+             
           ],)
         ),
     );

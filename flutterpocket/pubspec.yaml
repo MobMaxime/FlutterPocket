@@ -28,6 +28,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_swiper :
+  google_maps_flutter:
 
 
 # For information on the generic Dart part of this file, see the
@@ -58,10 +60,15 @@ flutter:
         - asset: fonts/Aller/Aller_Rg.ttf
         - asset: fonts/Aller/Aller_Bd.ttf
           weight: 900
+    - family:  MyFlutterApp
+      fonts:
+        - asset: fonts/CustomIcons/MyFlutterApp.ttf
+
   assets:
     - assets/
     - assets/laptop/
     - assets/profile/
+    - assets/nature/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
