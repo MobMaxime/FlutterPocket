@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutterpocket/src/ui/DrawerExample.dart';
+import 'package:flutterpocket/src/ui/Drawer/DrawerExample.dart';
 import 'package:flutterpocket/src/ui/GridView/AllGrid.dart';
-import 'package:flutterpocket/src/ui/MapExample.dart';
-import 'package:flutterpocket/src/ui/PageSwiper.dart';
+import 'package:flutterpocket/src/ui/MapView/MapExample.dart';
+import 'package:flutterpocket/src/ui/Media/AllMediaList.dart';
+import 'package:flutterpocket/src/ui/Swiper/PageSwiper.dart';
 import 'package:flutterpocket/src/ui/TabBar/AllTabs.dart';
+import 'package:flutterpocket/src/ui/WebView/WebViewExample.dart';
 import 'package:flutterpocket/src/utils/constants.dart';
 import 'package:flutterpocket/src/blocs/Provider.dart';
 import 'package:flutterpocket/src/blocs/Navigation/navigationBloc.dart';
 import 'package:flutterpocket/src/ui/PageController.dart';
 import 'package:flutterpocket/src/ui/SliversExample.dart';
-import 'package:flutterpocket/src/ui/AlertExamples.dart';
+import 'package:flutterpocket/src/ui/AlertDialogs/AlertExamples.dart';
 import 'package:flutterpocket/src/ui/ListView/AllList.dart';
 
 class Dashboard extends StatelessWidget {
@@ -132,7 +134,28 @@ class Dashboard extends StatelessWidget {
                            builder: (BuildContext context) => new MapExample()));
                   },
                 ),
-              ),            
+              ),  
+              Card(color: Color(Constants.ThemeColor),
+                child: ListTile(
+                  leading: Icon(Icons.video_library,color: Color(Constants.FontColor),),
+                  title: Text('Media',style: style,),
+                  onTap: () {
+                     Navigator.of(context).push(MaterialPageRoute(
+                           builder: (BuildContext context) => new AllMediaList()));
+                  },
+                ),
+              ),
+              Card(color: Color(Constants.ThemeColor),
+                child: ListTile(
+                  leading: Icon(Icons.web,color: Color(Constants.FontColor),),
+                  title: Text('WebView',style: style,),
+                  onTap: () {
+                     Navigator.of(context).push(MaterialPageRoute(
+                           builder: (BuildContext context) => new WebViewExample('Web View')));
+                  },
+                ),
+              ),    
+       
              
           ],)
         ),

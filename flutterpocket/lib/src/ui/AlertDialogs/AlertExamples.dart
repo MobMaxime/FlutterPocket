@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterpocket/src/utils/constants.dart';
+import 'package:flutterpocket/src/my_flutter_app_icons.dart';
 //Color(0xff006a77)
 class AlertExamples extends StatelessWidget {
   @override
@@ -14,6 +15,7 @@ class AlertExamples extends StatelessWidget {
                 cardColor: Color(Constants.ThemeColor),
               ),
               child: PopupMenuButton<String>(tooltip: 'select',
+              icon: Icon(MyFlutterApp.short_text,color: Color(Constants.FontColor),),
               itemBuilder: (BuildContext context){
                 return Constants.options.map((String option){
                   return PopupMenuItem<String>(
