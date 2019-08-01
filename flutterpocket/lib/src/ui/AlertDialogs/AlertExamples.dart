@@ -16,6 +16,7 @@ class AlertExamples extends StatelessWidget {
               ),
               child: PopupMenuButton<String>(tooltip: 'select',
               icon: Icon(MyFlutterApp.short_text,color: Color(Constants.FontColor),),
+              onSelected: changeTheme,
               itemBuilder: (BuildContext context){
                 return Constants.options.map((String option){
                   return PopupMenuItem<String>(
@@ -94,8 +95,6 @@ class AlertExamples extends StatelessWidget {
             //     ],
             //   ),
             // )
-            
-
           ],
         ),
       ),
@@ -105,6 +104,10 @@ class AlertExamples extends StatelessWidget {
         onPressed: (){},
       ),
     );
+  }
+  changeTheme(String action)
+  {
+      
   }
   showAlert(context)
   {
