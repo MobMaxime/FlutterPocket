@@ -3,7 +3,7 @@
 ### Featured In
 <img src="Images/Screen Shot 2019-08-07 at 3.20.22 PM.png" height="300em" /> <img src="Images/Screen Shot 2019-08-07 at 3.20.34 PM.png" height="300em" /> <img src="Images/Screen Shot 2019-08-07 at 3.20.51 PM.png" height="300em" /> 
 
-<img src="Images/Screen Shot 2019-08-07 at 3.21.06 PM.png" height="300em" /> <img src="Images/Screen Shot 2019-08-07 at 3.21.56 PM.png" height="300em" /> <img src="Images/Screen Shot 2019-08-07 at 3.21.56 PM.png" height="300em" />
+<img src="Images/Screen Shot 2019-08-07 at 3.21.06 PM.png" height="300em" /> <img src="Images/Screen Shot 2019-08-07 at 3.21.56 PM.png" height="300em" /> <img src="Images/Screen Shot 2019-08-07 at 3.21.33 PM.png" height="300em" />
 
 ## Example Controls
 1. ListView
