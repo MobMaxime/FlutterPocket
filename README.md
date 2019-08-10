@@ -18,6 +18,9 @@
 10. Media
 11. WebView
 
+## Android Demo APK File
+[Android APK](https://bit.ly/2Tl5E0U)
+
 
 ### Created & Maintained By
 [MobMaxime](http://mobmaxime.com)
