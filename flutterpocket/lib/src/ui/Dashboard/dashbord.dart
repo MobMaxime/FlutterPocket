@@ -3,6 +3,7 @@ import 'package:flutterpocket/src/ui/Drawer/DrawerExample.dart';
 import 'package:flutterpocket/src/ui/GridView/AllGrid.dart';
 import 'package:flutterpocket/src/ui/MapView/MapExample.dart';
 import 'package:flutterpocket/src/ui/Media/AllMediaList.dart';
+import 'package:flutterpocket/src/ui/RTL/RTLSample.dart';
 import 'package:flutterpocket/src/ui/Swiper/PageSwiper.dart';
 import 'package:flutterpocket/src/ui/TabBar/AllTabs.dart';
 import 'package:flutterpocket/src/ui/WebView/WebViewExample.dart';
@@ -35,7 +36,7 @@ class Dashboard extends StatelessWidget {
               color: Color(Constants.ThemeColor),
                 child: ListTile(
                   leading: Icon(Icons.list,color: Color(Constants.FontColor),),
-                  title: Text('ListView',style: style,),
+                  title: Text('ListView',style: style),
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) => new AllList()));
@@ -89,7 +90,7 @@ class Dashboard extends StatelessWidget {
               Card(
                 color: Color(Constants.ThemeColor),
                 child: ListTile(
-                  leading: Icon(Icons.pageview,color: Color(Constants.FontColor),),
+                  leading: Icon(Icons.pages,color: Color(Constants.FontColor),),
                   title: Text('Page Controller',style: style,),
                   onTap: () {
                       navBloc.updateNavigation(bloc.widgetController[5]);
@@ -116,11 +117,21 @@ class Dashboard extends StatelessWidget {
               Card(
                 color: Color(Constants.ThemeColor),
                 child: ListTile(
-                  leading: Icon(Icons.navigation,color: Color(Constants.FontColor),),
+                  leading: Icon(Icons.swap_horiz,color: Color(Constants.FontColor),),
                   title: Text('Swiper',style: style,),
                   onTap: () {
                      Navigator.of(context).push(MaterialPageRoute(
                            builder: (BuildContext context) => new PageSwiper('Page Swiper')));
+                  },
+                ),
+              ), 
+              Card(color: Color(Constants.ThemeColor),
+                child: ListTile(
+                  leading: Icon(Icons.format_textdirection_r_to_l,color: Color(Constants.FontColor),),
+                  title: Text('RTL',style: style,),
+                  onTap: () {
+                     Navigator.of(context).push(MaterialPageRoute(
+                           builder: (BuildContext context) => new RTLSample()));
                   },
                 ),
               ), 
@@ -154,9 +165,7 @@ class Dashboard extends StatelessWidget {
                            builder: (BuildContext context) => new WebViewExample('Web View')));
                   },
                 ),
-              ),    
-       
-             
+              ),   
           ],)
         ),
     );

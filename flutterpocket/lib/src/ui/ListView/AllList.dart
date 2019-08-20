@@ -3,6 +3,7 @@ import 'package:flutterpocket/src/ui/ListView/ListExample4.dart';
 import 'package:flutterpocket/src/ui/ListView/ListExample1.dart';
 import 'package:flutterpocket/src/ui/ListView/ListExample2.dart';
 import 'package:flutterpocket/src/ui/ListView/ListExample3.dart';
+import 'package:flutterpocket/src/ui/SearchSample.dart';
 import 'package:flutterpocket/src/utils/constants.dart';
 class AllList extends StatelessWidget {
   final style = TextStyle(color: Color(Constants.FontColor),);
@@ -49,6 +50,14 @@ class AllList extends StatelessWidget {
               onTap: (){
                 Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) => new ListExample4('ListExample4')));
+              },),
+            ),
+            Card(color: Color(Constants.ThemeColor),
+              child: ListTile(
+              title: Text('List With Search',style: style,),
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) => new SearchSample()));
               },),
             ),
           ],
