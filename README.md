@@ -17,6 +17,7 @@
 9. Google Map
 10. Media
 11. WebView
+12. RTL
 
 ## Android Demo APK File
 [Android APK](https://bit.ly/2Tl5E0U)
